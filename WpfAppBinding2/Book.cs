@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
+using System.Windows.Media;
 
 namespace WpfAppBinding2
 {
@@ -34,9 +37,15 @@ namespace WpfAppBinding2
         private short yearOfIssue;
         private string author;
         private DateTime dateOf;
+        private double rank;
         public int BookId {
             get => bookId;
-            set { SetProperty(ref bookId, value, nameof(BookId)); }
+            set {
+                if (value < 0)
+                    throw new ArgumentException("Value cannot less 0!");
+
+                SetProperty(ref bookId, value, nameof(BookId));
+            }
         }
         public string Name {
             get => name;
@@ -56,6 +65,12 @@ namespace WpfAppBinding2
         {
             get => dateOf;
             set { SetProperty(ref dateOf, value, nameof(DateOf)); }
+        }
+
+        public double Rank
+        {
+            get => rank;
+            set { SetProperty(ref rank, value, nameof(Rank)); }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -11,6 +11,9 @@
                             ObjectType="{x:Type local:BookRepository}"
                             MethodName="GetBooks"/>
     </Window.Resources>-->
+    <Window.Resources>
+        <local:DoubleToColorConverter x:Key="dc"/>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -34,14 +37,36 @@
         <UniformGrid Grid.Column="1" Columns="2" Margin="10"
                      DataContext="{Binding ElementName=lstBooks, Path=SelectedItem}">
 
+            <TextBlock Text="BookId and Name" Margin="5"/>
+            <TextBlock Margin="5">
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}[{0}] {1}, {2}">
+                        <Binding Path="BookId"/>
+                        <Binding Path="Name"/>
+                        <Binding Path="YearOfIssue"/>
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+
             <TextBlock Text="BookId" Margin="5"/>
-            <TextBox x:Name="bookId" Text="{Binding Path=BookId, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBox x:Name="bookId" 
+                     Text="{Binding Path=BookId, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnExceptions=True}"/>
 
             <TextBlock Text="Book Name" Margin="5"/>
             <TextBox x:Name="bookName" Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}"/>
 
             <TextBlock Text="Year Of Issue" Margin="5"/>
-            <TextBox x:Name="yearOfIssue" Text="{Binding Path=YearOfIssue, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBox x:Name="yearOfIssue">
+                <TextBox.Text>
+                    <Binding Path="YearOfIssue" 
+                             Mode="TwoWay" 
+                             UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <local:YearOfIssueRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
 
             <TextBlock Text="Author" Margin="5"/>
             <TextBox x:Name="author" Text="{Binding Path=Author, UpdateSourceTrigger=PropertyChanged}"/>
@@ -49,6 +74,10 @@
             <TextBlock Text="Date Of" Margin="5"/>
             <DatePicker SelectedDate="{Binding Path=DateOf, UpdateSourceTrigger=PropertyChanged}"/>
             <!--<TextBox x:Name="dateOf" Text="{Binding Path=DateOf, UpdateSourceTrigger=PropertyChanged}"/>-->
+
+            <TextBlock Text="Rank" Margin="5"/>
+            <TextBox x:Name="rank" Text="{Binding Path=Rank, UpdateSourceTrigger=PropertyChanged}"
+                     Background="{Binding Path=Rank, Converter={StaticResource dc}}"/>
 
             <Button x:Name="btnAdd" Content="Add" Margin="5" Click="btnAdd_Click"/>
             <Button x:Name="btnDelete" Content="Delete" Margin="5" Click="btnDelete_Click"/>
