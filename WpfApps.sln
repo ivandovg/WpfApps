@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppBinding", "WpfAppBind
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppBinding2", "WpfAppBinding2\WpfAppBinding2.csproj", "{4FB9118B-990D-433F-954C-D81DF1F21ADB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppStyles", "WpfAppStyles\WpfAppStyles.csproj", "{4485AF69-1742-48CC-8BE2-516D2AAF0EC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppStylesDynamic", "WpfAppStylesDynamic\WpfAppStylesDynamic.csproj", "{B68350AF-0878-461D-AA88-8C7A03A62AC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{4FB9118B-990D-433F-954C-D81DF1F21ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FB9118B-990D-433F-954C-D81DF1F21ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FB9118B-990D-433F-954C-D81DF1F21ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4485AF69-1742-48CC-8BE2-516D2AAF0EC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4485AF69-1742-48CC-8BE2-516D2AAF0EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4485AF69-1742-48CC-8BE2-516D2AAF0EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4485AF69-1742-48CC-8BE2-516D2AAF0EC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B68350AF-0878-461D-AA88-8C7A03A62AC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B68350AF-0878-461D-AA88-8C7A03A62AC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B68350AF-0878-461D-AA88-8C7A03A62AC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B68350AF-0878-461D-AA88-8C7A03A62AC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
