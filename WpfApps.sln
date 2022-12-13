@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32901.82
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppBinding", "WpfAppBinding\WpfAppBinding.csproj", "{B1D1474F-6D42-4C41-844A-4768D3C4A9E2}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppStylesDynamic", "WpfAppStylesDynamic\WpfAppStylesDynamic.csproj", "{B68350AF-0878-461D-AA88-8C7A03A62AC2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppTriggers1", "WpfAppTriggers1\WpfAppTriggers1.csproj", "{204D4227-D766-4304-BD78-DF2A15B388A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppTemplates1", "WpfAppTemplates1\WpfAppTemplates1.csproj", "{39A5B492-457B-45DB-B859-1179CC395EED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{204D4227-D766-4304-BD78-DF2A15B388A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{204D4227-D766-4304-BD78-DF2A15B388A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{204D4227-D766-4304-BD78-DF2A15B388A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39A5B492-457B-45DB-B859-1179CC395EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39A5B492-457B-45DB-B859-1179CC395EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39A5B492-457B-45DB-B859-1179CC395EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39A5B492-457B-45DB-B859-1179CC395EED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
