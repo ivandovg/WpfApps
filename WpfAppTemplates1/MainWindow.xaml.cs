@@ -38,7 +38,7 @@ namespace WpfAppTemplates1
                 listToDo.Add(
                     new ToDoClass()
                     {
-                        Id = i,
+                        Id = i + 1,
                         Title = "Task " + (i + 1),
                         Description = $"Make templates in WPF ({i})",
                         Deadline = DateTime.Now
